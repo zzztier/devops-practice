@@ -10,7 +10,7 @@ This repo documents my journey from IT Helpdesk to DevOps Engineer.
 - [x] Nginx web server setup
 - [x] Bash scripting
 - [x] Git version control
-- [ ] Docker
+- [x] Docker
 - [ ] AWS
 - [ ] Terraform
 - [ ] Kubernetes
