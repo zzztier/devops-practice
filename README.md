@@ -11,8 +11,8 @@ This repo documents my journey from IT Helpdesk to DevOps Engineer.
 - [x] Bash scripting
 - [x] Git version control
 - [x] Docker
-- [ ] AWS
-- [ ] Terraform
+- [x] AWS
+- [x] Terraform
 - [ ] Kubernetes
 
 ## Environment
