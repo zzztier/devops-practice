@@ -13,7 +13,7 @@ This repo documents my journey from IT Helpdesk to DevOps Engineer.
 - [x] Docker
 - [x] AWS
 - [x] Terraform
-- [ ] Kubernetes
+- [x] Kubernetes
 
 ## Environment
 - OS: Ubuntu on WSL2
