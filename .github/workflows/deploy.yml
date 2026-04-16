@@ -1,0 +1,33 @@
+name: DevOps Pipeline
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Print system info
+        run: |
+          echo "Pipeline triggered by ${{ github.actor }}"
+          echo "Running on branch ${{ github.ref }}"
+          uname -a
+
+      - name: Build Docker image
+        run: |
+          cd my-website
+          docker build -t niks-website .
+          echo "Docker image built successfully"
+
+      - name: Run container test
+        run: |
+          docker run -d -p 8080:80 --name test-nginx niks-website
+          sleep 3
+          curl http://localhost:8080 | grep "Nik's DevOps Server"
+          echo "Container test passed!"
+          docker stop test-nginx
